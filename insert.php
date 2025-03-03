@@ -34,9 +34,9 @@ if (isset($_POST['knop'])) {
 </head>
 <body>
     <form method="Post">
-    product<input type="text" name="product_naam" ><br>
-    prijs per stuk<input type="text" name="prijs_per_stuk"><br>
-    omschrijving    <input type="text" name="omschrijving"><br>
+    product<input type="text" name="product_naam" required><br>
+    prijs per stuk<input type="text" name="prijs_per_stuk" required><br>
+    omschrijving    <input type="text" name="omschrijving" required><br>
         <input type="submit" name="knop" value="submit"><br>
     </form>
 </body>
