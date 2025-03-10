@@ -33,11 +33,12 @@ if (isset($_POST['knop'])) {
     <title>Document</title>
 </head>
 <body>
+    <h1>Producten toevoegen</h1>
     <form method="Post">
-    product<input type="text" name="product_naam" required><br>
-    prijs per stuk<input type="text" name="prijs_per_stuk" required><br>
-    omschrijving    <input type="text" name="omschrijving" required><br>
-        <input type="submit" name="knop" value="submit"><br>
+    <input type="text" name="product_naam" placeholder="product_naam" required><br>
+    <input type="text" name="prijs_per_stuk" placeholder="prijs_per_stuk" required><br>
+    <input type="text" name="omschrijving" placeholder="omschrijving" required><br>
+    <input type="submit" name="knop" value="submit"><br>
     </form>
 </body>
 </html>       
