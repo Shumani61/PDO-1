@@ -17,6 +17,9 @@ $result = $Producten->fetchAll();
     <title>info</title>
 </head>
 <body>
+
+    
+
     <h2>Overzicht producten</h2>
 <table class="table table-dark table-bordered border-primary">
         <tr>
@@ -24,6 +27,7 @@ $result = $Producten->fetchAll();
             <th class="table-light">product_naam</th>
             <th class="table-light">prijs_per_stuk</th>
             <th class="table-light">omschrijving</th>
+            <th class="table-light">Action</th>
         </tr>
 
        <?php
@@ -33,6 +37,7 @@ $result = $Producten->fetchAll();
            echo "<td>". $Producten['product_naam']. "</td>";
            echo "<td>". $Producten['prijs_per_stuk']. "</td>";
            echo "<td>". $Producten['omschrijving']. "</td>";
+           echo "<td> <a href='update.php?product_code=".$Producten['product_code']."'>Edit</a> </td>";
            echo "</tr>";
        }
        ?>
