@@ -7,7 +7,7 @@ if (isset($_POST['knop'])) {
     $omschrijving = $_POST ['omschrijving'];
     $product_code = $_GET ['product_code'];
 
-    $sql = "UPDATE Producten SET product_naam= :product_naam, prijs_per_product= :prijs_per_product, omschrijving= :omschrijving WHERE product_code = :product_code";
+    $sql = "UPDATE Producten SET product_naam= :product_naam, prijs_per_stuk= :prijs_per_stuk, omschrijving= :omschrijving WHERE product_code = :product_code";
     $result = $pdo->prepare($sql);
     $placeholders = [
         "product_naam" => $product_naam,
@@ -17,12 +17,11 @@ if (isset($_POST['knop'])) {
     ];
     $result->execute($placeholders);
     if ($result) {
-        echo "product aangepast";
-        header("Refresh:3; url= Location: select.php ");
+        echo "Product aangepast!";
+        header("Refresh:3; url = select.php");
     } else {
-        echo "Er is een fout opgetreden";
+        echo "Er is een fout opgetreden!";
         die();
-
     }
 }
 
