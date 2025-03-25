@@ -36,7 +36,7 @@ if (isset($_POST['knop'])) {
 </head>
 <body>
     <H2>Product aanpassen</H2>
-<form method="Post">
+<form method="POST">
     <input type="text" name="product_naam" placeholder="product_naam" required><br>
     <input type="text" name="prijs_per_stuk" placeholder="prijs_per_stuk" required><br>
     <input type="text" name="omschrijving" placeholder="omschrijving" required><br>
